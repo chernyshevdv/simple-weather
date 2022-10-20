@@ -3,15 +3,21 @@ pipeline {
 
 	stages {
 		stage("build"){
-			echo 'building application...'
-			sh 'mvn build'
+			steps {
+				echo 'building application...'
+				sh 'mvn build'
+			}
 		}
 		stage("test"){
-			echo 'testing the app...'
-			sh 'mvn test'
+			steps {
+				echo 'testing the app...'
+				sh 'mvn test'
+			}
 		}
 		stage("deploy"){
-			echo 'deploying the app...'
+			steps {
+				echo 'deploying the app...'
+			}
 		}
 	}
 }
